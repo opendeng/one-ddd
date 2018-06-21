@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul,ol{list-style:none;}
+        img {
+            display: block;  /* 清除图片底册 3像素缝隙，其他既是清楚换行*/
+        }
+        .slider {/*大盒子包括了一切*/
+            width: 490px;
+            height: 170px;
+            border:1px solid #ccc;
+            margin: 100px auto;
+            padding:5px;
+            position: relative;/*相对定位*/
+        }
+        .inner {/*图片盒子，在大盒子里面；百分之一百是大盒子的宽度*/
+            width: 100%;
+            height: 100%;
+            background-color: pink;
+            position: relative;/*相对定位*/
+            overflow: hidden;/*溢出隐藏*/
+        }
+        .inner ul {/*存放ul变长。图片的宽度*/
+            width: 1000%;
+            position: absolute;/*绝对定位了*/
+            top: 0;
+            left: 0;
+        }
+        .inner ul li {
+            float: left;/*排成一排，浮动会脱离文档流*/
+        }
+
+        .slider ol {/*ol位置绝对。大盒子里的位置*/
+            position: absolute;/*因为父级有了先对定位或者绝对定位*/
+            left: 50%;
+            margin-left: -80px;
+            bottom: 10px;
+
+        }
+        .slider ol li{
+            float: left;
+            width: 18px;
+            height: 18px;
+            background-color: #fff;
+            margin-right: 10px;
+            text-align: center;
+            line-height: 18px;
+            cursor: pointer;/*小手指针*/
+        }
+        .slider ol li.current {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+<div class="slider" id="jd">
+    <div class="inner">
+        <ul>
+            <li><a href="#"><img src="images/01.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="images/02.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="images/03.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="images/04.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="images/05.jpg" alt=""/></a></li>
+        </ul>
+    </div>
+    <ol>
+        <li class="current">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+</div>
+</body>
+</html>
+<script>
+    var  jd = document.getElementById("jd");
+    var ul = jd.getElementsByTagName("ul")[0];
+    var ol = jd.getElementsByTagName("ol")[0];
+    var olLis = ol.children;/*children是指元素的第一层子节点。5个*/
+    var leader = 0, target = 0;  // target 目标位置
+    for(var i=0; i<olLis.length; i++)
+    {
+
+        olLis[i].index = i;  // 每个li 的索引号
+        olLis[i].onmouseover = function() {
+            for(var j=0;j<olLis.length;j++)
+            {
+                olLis[j].className = "";//排他思想
+            }/*for清空当前的class*/
+            this.className = "current";//表示的是谁调用了就是付给谁current的className
+            target = -this.index * 490; // 目标位置 就是用当前的索引号乘以  一个盒子的宽度
+        }
+    }
+    setInterval(function() {
+        leader = leader + (target - leader ) / 10;
+        ul.style.left = leader + "px";/*移动的是ul，不是div*/
+    },30);//控制速度/1000
+
+
+</script>
