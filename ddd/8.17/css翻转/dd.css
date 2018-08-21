@@ -1,0 +1,48 @@
+*{margin: 0;
+padding: 0;}
+
+.aaa{
+    width: 100px;
+    height: 100px;;
+    position: relative;
+    background-color: rgb(224, 245, 190);
+    backface-visibility: hidden;
+    transition: ease-in-out 1000ms;/**/
+
+}
+.back {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(240, 27, 27);
+    
+    border-radius: 6px;/**/
+   
+    
+    text-align: center;/**/
+    justify-content: center;/**/
+    
+    position: absolute;/**/
+    top: 0px;
+    left: 0px;
+    -webkit-backface-visibility: hidden;/*隐藏被旋转div的背面*/
+    backface-visibility: hidden;/*隐藏被旋转div的背面*/
+    transform-style: preserve-3d;/*使被转换的子元素保留其 3D 转换：*/
+    transition: ease-in-out 1000ms;/**/
+  }
+  /* .aaa:{
+    
+    transform: rotateY(180deg);
+  } */
+  #f:hover .back{
+    /* back旋转了，被隐藏 */
+  transform: rotateY(180deg);}
+
+  #f:hover .aaa{
+    /* back旋转了，被隐藏 */
+  transform: rotateY(360deg);
+  /* //并不会覆盖么？ */
+}
+
+
+
+  

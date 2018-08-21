@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        var ajax = $.ajax({
+            url: 'data.json',
+            success: function () { //成功执行的回调函数
+                console.log('success')
+            },
+            error: function () { //失败执行的回调函数
+                console.log('error')
+            }
+        })
+
+        console.log(ajax) // 返回一个 XHR 对象
+    ////////////////////////
+    function waitHandle() {
+    var dtd = $.Deferred()
+    var wait = function (dtd) {
+        var task = function () {
+            console.log('执行完成')
+            dtd.resolve()
+                                }
+        setTimeout(task, 2000)
+        return dtd.promise()  // 注意，这里返回的是 primise 而不是直接返回 deferred 对象
+    }
+    return wait(dtd)
+}
+
+
+var w = waitHandle() // 经过上面的改动，w 接收的就是一个 promise 对象
+$.when(w)
+ .then(function () {
+    console.log('ok 1')
+ })
+ .then(function () {
+    console.log('ok 2')
+ })
+    
+    var aaa=$.Deferred();
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+.right{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+     button{
+         float: right;
+     }
+ }
+ .right0{
+   @extend .right;
+   bottom:99px;
+ }
+
+.aa{ 
+    li:hover{color: red;
+       
+    
+    
+    }
+    }
+#bo{
+    width: 1200px;
+    height: 700px;
+    // margin-left: 100px;
+    background-color: green;
+    margin: auto;
+    
+}
+#head{
+    
+    ul{ width: 1200px;
+       margin: 0;
+       padding: 0;
+        li{     
+                text-align: center;
+                list-style: none;
+                float: left;
+                width: 200px;
+                height: 35px;;
+                background-color: rgb(190, 186, 186);
+                line-height: 35px;
+        }
+    }
+}
+.body{
+    background-color: rgb(235, 232, 232);
+    height: 300px;
+    // display: none;
+
+
+}
+
+.mo{
+    background-color: #fff;
+}

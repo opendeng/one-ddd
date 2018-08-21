@@ -1,0 +1,62 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css"> -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+
+	<!-- <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script> -->
+	<script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+
+	<style type="text/css">
+		.box {
+			width: 250px;
+			height: 500px;
+			margin: 0 auto;
+			font-family: 微软雅黑;
+		}
+
+		h4 {
+			text-align: center;
+		}
+	</style>
+	<title>登录</title>
+</head>
+
+<body>
+	<div class="box">
+		<h4>登录界面</h4>
+
+		
+		<form id="insert_modal" class="form-horizontal ">
+			<div class="form-group mb-3 has-feedback ">
+			
+			
+				<input type="text" class="form-control" id="insert_name" name="name" placeholder="请输入账号" /> 
+				
+				<span class="help-block"></span>
+			
+			</div>
+
+			<!-- 密码 -->
+			<div class="form-group mb-3">
+				<input type="password" class="form-control" id="insert_password" name="password" placeholder="请输入密码" />
+				<span class="help-block"></span>
+			</div>
+			<div class="">
+				<button type="button" class="btn btn-primary btn-block" id="user_insert_btn">登录</button>
+				<button type="button" onclick="dd()" class="btn btn-primary btn-block" id="user_register_btn">注册</button>
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript" src="validate.js"></script>
+	<script type="text/javascript">
+		window.onload = function () {
+			 validate_add_form()
+		}
+	</script>
+</body>
+
+</html>

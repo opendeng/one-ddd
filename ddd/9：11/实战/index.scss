@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    border: 0;
+}
+
+
+
+.bigbox {
+    width: 1310px;
+    //height: 605px;
+    margin-left: 120px;
+    background-color: #fff;
+.head {
+        display: block;
+        width: 1308px;
+        height: 30px;       
+        .head-a {
+            padding-left: 75px;
+            vertical-align: middle;
+            font-size: 14px;
+            color:#666666;
+            img {
+                vertical-align: middle;
+            }
+        }
+        ul {
+            margin-right: 0;
+            float: right;
+            li {
+                float: left;
+                a {
+                    margin-right:5px;
+                    margin-left:5px;
+                    text-align: center;
+                    vertical-align: middle;
+                    width: 50px;
+                    font-size: 12px;
+                    color:#666666;
+                }
+                img {
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
+.center{
+    position: relative;
+    width: 1310px;
+    height: 90px;
+    .logo{
+        float: left;
+        img{
+            margin-right: 70px;
+            width: 240px;
+            height: 90px;
+        }
+    }
+
+.center-b{
+        // display:block;
+        margin: 20px 0 0 100px;
+        float: left;
+        // margin:0 auto;
+        width: 480px;
+        height: 34px;
+        size: 12px;
+        color:#ff0077;
+        border:1px solid #FF0077;
+        select{
+            color:#ff0077;
+            border:none;
+            outline:none;
+        }
+        input{
+            line-height: 34px;
+            border:none;
+            outline:none;
+        }
+        .search{
+            width: 100px;
+            height: 34px;
+            position: relative;
+            margin-right: 0;
+            float: right;
+            color: #fff;
+            size: 50px;
+            background-color:#ff0077;
+        }
+    }
+.center-c{
+        margin: 5px 0 0 100px;
+        line-height: 34px;
+        float: left;
+        width: 480px;
+        height: 34px;
+        color: #000;
+       a{
+        font-size:14px;
+        margin-left:7px;
+        color: #000;
+        span{
+            color: #FF0077;
+        }
+    }
+}
+.logo-b{
+        // float: right;
+        position: absolute;
+        top: 6px;
+        right: 10px;
+        img{
+            width: 220px;
+            height: 90px;
+        }
+    }
+
+
+//cenetr结尾
+}
+
+.theme{
+    float: left;
+    width: 1190px;
+    height: 40px;
+    margin:auto;
+
+    .theme-a{ 
+        float: left; 
+        width: 257px;
+        height: 40px;
+        font-size: 20px;
+        line-height:34px;
+        //vertical-align: middle;
+        background-color:#ff0077;
+        a{
+            color: #fff; 
+        }
+        img{
+            vertical-align: middle;
+            height: 30px;
+        }
+    }
+    .theme-b{
+        display:inline;
+        float: left;
+        width: 281px;
+        height: 40px;
+        margin-left:50px;
+        a{
+            text-align: center;
+            line-height: 34px;
+            color: #666666;
+            font-size: 16px;
+        }
+    }
+
+//theme结尾
+}
+.hr{
+    width: 1310px;
+    //width: 1324px;
+    height: 2px;
+    background-color: #ff0077;
+}
+//digbox结尾
+}

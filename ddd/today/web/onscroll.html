@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.css">
+    <title>Document</title>
+</head>
+<style>
+    /* * {
+        margin: 0;
+        padding: 0;
+
+    } */
+
+    body {
+        /* background-color: red; */
+        background-image: url("../po/z0.jpg");
+        background-size: cover;
+        ;
+        background-position: center;
+        /* //背景居中 */
+        background-repeat: no-repeat;
+        /* //无重复<br> */
+        background-attachment: fixed;
+        /* //固定不动 */
+        /* scroll随他移动 */
+    }
+
+    ul {
+
+        width: 1000px;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+
+
+    }
+
+    li {
+        z-index: 999px;
+        width: 200px;
+        height: 55px;
+        /* background-color:rgba(95, 21, 21,0.1); */
+        float: left;
+        text-align: center;
+        line-height: 55px;
+
+
+
+    }
+
+    .p {
+        height: 10000px;
+        width: 1000px;
+        background-color: green;
+        overflow-y: auto;
+        max-height: 10000px;
+        min-height: 150px;
+    }
+
+    .all {
+        width: 1000px;
+        text-align: center;
+        margin: auto;
+    }
+
+    #l {
+        background-color: red;
+    }
+
+    .M {
+        z-index: 99999px;
+
+
+
+    }
+
+    .right {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+    }
+    .a0{
+        display: block;
+        margin: auto;
+    }
+</style>
+
+
+</style>
+
+<body>
+    <div class="right">
+        <a href="../index.html">
+            <button class="btn ">
+                <span class="glyphicon glyphicon-forward btn-lg"></span>
+            </button>
+        </a>
+    </div>
+    <div class="all" style="width: 1000px;height: 55px;z-index: 999px;">
+        <div id="l">
+            <Ul>
+                <li id="a0">123</li>
+                <li id="a1">12</li>
+                <li id="a2">3</li>
+                <li id="a3">12</li>
+                <li id="a4">3</li>
+
+
+            </Ul>
+        </div>
+    </div>
+    <div class="all">
+        <button class="btn" id="m" style="width: 75px;height: 30px;position:fixed;right: 10px;bottom: 123px;">
+            <a href="#l" class="A0"> 回到顶部</a>
+        </button>
+        <div class="p" id="MV">
+            <p>dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+            <p>1112311111111111111</p>
+
+            <p>1112311111111111111</p>
+            <p>1112311111111111111</p>
+
+            <p>1112311111111111111</p>
+
+            <p>1112311111111111111</p>
+
+
+            <p>1112311111111111111</p>
+
+            <p>1112311111111111111</p>
+
+
+            <p>1112311111111111111</p>
+
+            <p>1112311111111111111</p>
+            <p>1112311111111111111</p>
+
+
+
+
+            <p>1112311111111111111</p>
+            <p>1112311111111111111</p>
+            <p>1112311111111111111</p>
+            <p>1112311111111111111</p>
+            <p>1112311111111111111</p>
+
+            <p>1112311111111111111</p>
+            <p>1112311111111111111</p>
+            <p>1112311111111111111</p>
+
+
+        </div>
+    </div>
+    <marquee class="M">..woalfjjsalfjhnglndjagnlkjngiajenrjnh;N;ONONONN;KLJNLK.</marquee>
+    <!-- 滚动方向direction（包括4个值：up、 down、 left和 right）
+    滚动方式behavior（scroll:循环滚动，默认效果； slide:只滚动一次就停止； alternate:来回交替进行滚动）
+滚动速度scrollamount（滚动速度是设置每次滚动时移动的长度，以像素为单位）
+
+　　语法：<marquee scrollamount="5">...</marquee>
+
+4.滚动延迟scrolldelay（设置滚动的时间间隔，单位是毫秒）（3.4可组合使用）
+
+　　语法：<marquee scrolldelay="100">...</marquee>
+
+5.滚动循环loop（默认值是-1，滚动会不断的循环下去）
+
+　　语法：<marquee loop="2">...</marquee>
+
+6.滚动范围width、height
+
+7.滚动背景颜色bgcolor
+
+8.空白空间hspace、vspace    
+-->
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<script src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="../js/canvasxiantiaodonghua.js"></script>
+<script type="text/javascript">
+    setInterval("ll()", 50);
+
+    var dd = document.getElementsByTagName("div");
+
+    function ll() {
+
+        if (document.documentElement.scrollTop <= 6000) {
+            document.documentElement.scrollTop += 10
+
+
+        } else {
+
+            ad = 0;
+
+        }
+
+
+    }
+
+
+
+
+    window.onscroll = function () {
+        var a = 0.01;
+        if (document.documentElement.scrollTop > 500) {
+            document.getElementById("m").style.display = "block";
+            document.getElementById("m").style.backgroundColor = Y0();
+
+            document.getElementById("l").style.color = Y0(); //颜色
+            document.getElementById("a0").style.backgroundColor = Y0(); //背景颜色
+            document.getElementById("a1").style.backgroundColor = Y0(); //背景颜色
+            document.getElementById("a2").style.backgroundColor = Y0(); //背景颜色
+            document.getElementById("a3").style.backgroundColor = Y0(); //背景颜色
+            document.getElementById("a4").style.backgroundColor = Y0(); //背景颜色
+
+            a += 0.3
+
+        } else {
+            document.getElementById("m").style.display = "none";
+            $("#a0").attr("style", {
+                "display": "none"
+            });
+            $("#a1").attr("style", {
+                "display": "none"
+            });
+            $("#a2").attr("style", {
+                "display": "none"
+            });
+            $("#a3").attr("style", {
+                "display": "none"
+            });
+            $("#a4").attr("style", {
+                "display": "none"
+            });
+            $("#l").attr("style", {
+                "display": "none"
+            });
+
+
+        }
+
+
+
+    }
+
+
+    var span = document.getElementsByTagName("span");
+    //var aaa=span.classList;
+    function ddd() {
+
+
+
+
+        var a;
+
+    }
+
+    function Y0() {
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+            color += (Math.random() * 16 | 0).toString(16);
+        }
+        return color;
+
+    }
+    var p = function () {
+
+
+        rnd = Math.floor(Math.random() * 10);
+        return rnd;
+
+
+
+    }
+
+    // $("marquee").attr("style",{'position':'fixed', 'top':'10px','left':'123px;'});不会弄
+</script>
+
+</html>

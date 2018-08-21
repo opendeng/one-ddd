@@ -1,0 +1,34 @@
+.top-nav {
+  height: 31px;
+  width: 100%;
+  background-color: #F2F2F2;
+}
+
+.top-nav .left {
+  float: left;
+  height: 31px;
+  line-height: 31px;
+}
+
+.top-nav .left a {
+  padding-left: 40px;
+  background: url("../images/icon/qlt.png") no-repeat 16px -241px;
+}
+
+.top-nav .right {
+  float: right;
+  height: 31px;
+  line-height: 31px;
+  color: green;
+}
+
+.top-nav .right li {
+  float: left;
+  margin-right: 15px;
+}
+
+.top-nav .right .order a {
+  padding-left: 38px;
+  color: green;
+  background: url("../images/icon/qlt.png") no-repeat 15px -535px;
+}

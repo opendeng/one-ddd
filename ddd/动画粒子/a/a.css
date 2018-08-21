@@ -1,0 +1,13 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #252525;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #spring-text {
+    position: absolute;
+  }

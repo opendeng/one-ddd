@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<!-- <style type="text/css">
+body{background-color: green;}
+/* //////////////////////////// */
+.a .b:hover div{
+        color: aqua;
+display: block;
+       
+}
+.f{display: none;
+width: 100px;height: 100px;left: 500px;background-color: red;}
+
+/* /////////////////////////////////////// */
+.c{
+    width: 200px;height: 200px;
+    background-color: rgb(31, 201, 31);
+}
+.c:hover span{
+    color: blue;
+    display: block;
+}
+span{
+    display: none;width: 100px;height: 100px;background-color: pink;position: absolute;
+}
+.container{width:400px;height:200px;border:2px solid #ff0000;}
+        .cu_toolbar{background-color:#8bb907;height:100px;width:100px;display:none;}
+        .container:hover .cu_toolbar{display:block;}
+
+</style> -->
+ <script type="text/javascript"> 
+
+
+//构造函数
+    var Obj={
+        p:'艾米',
+        func:function(){
+            alert("this是个对象"+ this)
+            alert(444444454564654)
+            alert(this.p);
+           
+        }
+    }
+
+   // Obj.func();//运行函数
+    function Al(){
+            this.aaaa="1";
+            this.fanv=function(){
+                alert("继承！")
+            }
+
+    }
+    function Bb(){
+        this.bbb="b"
+
+    }
+    function Dd(){
+        
+        // this.__proto__=Al.prototype;
+        this.fund= function(){
+            alert("我是原本的函数；");
+        
+        }
+      
+    }
+    var aa=new Al();//对象
+    var bb=new Bb();//对象
+    var dd=new Dd();//对像
+    dd.__proto__=aa;
+    dd.fund();
+    dd.fanv();//继承来的函数
+    alert(dd.aaaa);
+   
+    dd.__proto__=bb;
+    alert(dd.bbb);
+    dd.fanv();
+    //这句代码不会被及执行，因为dd的__proto__属性已经被Bb所代替，找不到Al的属性和方法。
+//一个构造函数继承另一个构造函数
+
+</script> -->
+
+<body>
+      <ul class="a">
+          <li class="b">
+                <a href="#"> dd</a>
+                <div class="f" >45564564564163</span>
+          </li>
+      </ul>
+
+
+<div class="c">
+    移动这里
+    <!-- <div>12132</div> -->
+   
+    <span  style="">999999</span>  <!-- 不能再这里写内置dispaly=none样式，会把上边定义的样式无视，一直都是不显示 -->
+</div>
+
+
+</body>
+
+</html>

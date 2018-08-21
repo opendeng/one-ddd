@@ -1,0 +1,17 @@
+div{
+    &:hover{
+        color: red;
+    }
+    ul{
+        color: aqua;
+        span{float: left;
+            display: none;
+            &:hover{
+                background-color: red;
+                width: 100px;
+                height: 100px;
+               color: aquamarine;
+                display: block;
+            }}
+    }
+}

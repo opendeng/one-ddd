@@ -1,0 +1,28 @@
+header  头部图片
+
+
+icon 图标以及雪碧图
+
+/** 
+	recommend 命名：热销商品推荐图片
+	***_banner* 命名：轮播推荐商品图片
+	***_banner_left 命名：如  潮流女装  这样的图片
+
+**/
+ 
+women_dress 潮流女装 图片
+
+sport  潮流运动，时尚男友 图片
+
+underclothes  潮流配饰，内衣时尚 图片
+
+living：热门电器，家居时尚 图片
+
+food_baby: 馋嘴零食以及辣妈萌宝 图片
+
+package：时尚包包，潮流美鞋 图片
+
+
+
+
+

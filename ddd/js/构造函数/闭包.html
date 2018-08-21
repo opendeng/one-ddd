@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script type="text/javascript">
+    var btns = 123456789
+    for (var i = 0, length = btns.length; i < length; i++) {
+        (function (i) {
+            var btn = btns[i]
+            btn.onclick = function () {
+                alert(i)
+            }
+        })(i)
+
+    }
+</script>
+
+</html>

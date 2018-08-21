@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="800" height="700" style="border:1px solid #000000;">
+        您的浏览器不支持 HTML5 canvas 标签。
+    </canvas>
+    <div>12123</div>
+    <script type="text/javascript">
+        var canvas = document.getElementById('myCanvas');
+
+        if (canvas.getContext) {
+            var context = canvas.getContext('2d'); //用这个对象画图
+            //如果没有通过moveTo()特别指定，lineTo()的起始点是以上一个点为准。因此，如果需要重新选择起始点，则需要通过moveTo()方法
+            context.moveTo(10, 10); //移动到这个点
+            context.lineTo(200, 200);
+
+            context.lineWidth = 2; //设置样式
+            context.strokeStyle = "#F5270B";
+
+            context.stroke(); //绘制
+            /////////////////////////
+            context.moveTo(800, 10); //移动到这个点
+            context.lineTo(200, 200);
+
+            context.lineWidth = 2; //设置样式
+            context.strokeStyle = "#F5270B";
+
+            context.stroke(); //绘制
+            /////////////////////////
+            context.moveTo(10, 700); //移动到这个点
+            context.lineTo(200, 200);
+
+            context.lineWidth = 2; //设置样式
+            context.strokeStyle = "#F5270B";
+
+            context.stroke(); //绘制
+            /////////////////////////
+            context.moveTo(800, 700); //移动到这个点
+            context.lineTo(200, 200);
+
+            context.lineWidth = 2; //设置样式
+            context.strokeStyle = "#F5270B";
+
+            context.stroke(); //绘制
+            /////////////////////////
+            context.moveTo(800, 10); //移动到这个点
+            context.lineTo(200, 200);
+
+            context.lineWidth = 2; //设置样式
+            context.strokeStyle = "#F5270B";
+
+            context.stroke(); //绘制
+            ////////////////////////////////////////////
+            context.beginPath();
+            context.moveTo(100, 100);
+            context.lineTo(700, 100);
+            context.lineTo(700, 400);
+            context.lineWidth = 2;
+            context.strokeStyle = "#F5270B";
+            //绘制
+            context.stroke();
+
+            context.beginPath();
+            context.moveTo(100, 200); //这里的moveTo换成lineTo效果是一样的
+            context.lineTo(600, 200);
+            context.lineTo(600, 400);
+            //strokeStyle的颜色有新的值，则覆盖上面设置的值
+            //lineWidth没有新的值，则按上面设置的值显示
+            context.strokeStyle = "#0D25F6"; //fillstyle=red//用红色填充
+            //绘制
+            context.stroke();
+
+            // drawing code here
+        } else {
+            // canvas-unsupported code here
+            alert("不支持");
+        }
+    </script>
+</body>
+
+</html>

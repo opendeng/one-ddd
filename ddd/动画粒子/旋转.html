@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .a {
+            width: 100px;
+            height: 150px;
+            
+            background: rgb(121, 245, 228);
+
+
+            transform: skewX(45deg);
+            transform: skewY(50deg);
+        }
+
+        .b {
+            /* background: red; */
+            transform: rotate(20deg)
+        }
+
+        .c {
+            position: fixed;
+            top: 390px;
+            left: 500px;;
+            animation: dd 10s linear infinite;
+            /* transform: rotateY() */
+        }
+
+        @keyframes dd {
+            0% {
+                transform: rotateY(0deg);
+                opacity: 0.5;
+            }
+            100% {
+                transform: rotateY(3600deg);
+                opacity: 0.7;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c">
+        <div class="b">
+            <div class="a"></div>
+        </div>
+    </div>
+</body>
+
+</html>

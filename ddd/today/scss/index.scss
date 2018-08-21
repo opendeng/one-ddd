@@ -1,0 +1,32 @@
+#body{
+    width: 1200px;
+    
+    background-color:rgb(78, 81, 83);
+    // margin-left: 100px;
+   
+}
+
+
+#head{
+    color: aqua;
+    text-align: center;
+    font-size: 90px;
+    font-family: 'Courier New', Courier, monospace
+
+}
+#po{
+    width: 1200px;
+}
+#right{
+   position: absolute;
+   right: 10px;
+   bottom: 10px;
+    button{
+        float: right;
+    }
+
+
+}
+h4{
+    font-family: str-index($string: "10", $substring: "12s")
+}

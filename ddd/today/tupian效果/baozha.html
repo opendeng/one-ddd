@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>纯CSS3实现元素抖动特效</title>
+    <style>
+        div{
+            margin-top: 100px;
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            background: red;
+        }
+        .dd{
+            float: left;
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+            background: rgb(98, 235, 127);
+            transform: rotateZ(45deg) ;
+            transform-origin:(0,0);
+            animation: aaa 1s infinite;
+        }
+           
+        .dd1{
+            float: left;
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+            background: rgb(98, 235, 127);
+            transform: rotate(90deg);
+            animation: aaa1 3s infinite;
+        }
+        .shake:hover{
+            animation: shake-crazy 1s infinite;
+            /* animation实现动画 */
+        }
+        /* .dd:hover{
+            animation: aaa 5s infinite ease;
+            /* infinite无限次或者指定数 */
+            /* animation实现动画 */
+        /*   } */
+        /* @keyframes承载动画 */
+        @keyframes shake-crazy {
+            0% { 
+                /* 移动旋转 */
+                transform: translate(0px, 0px) rotate(0deg);
+                opacity: 0.4
+            }
+            10% {
+                transform: translate(3px, 10px) rotate(-1deg);
+                opacity: 0.8
+            }
+            20% {
+                transform: translate(5px, 14px) rotate(-3deg);
+                opacity: 0.5
+            }
+            30% {
+                transform: translate(14px, 3px) rotate(4deg);
+                opacity: 0.6
+            }
+            40% {
+                transform: translate(-17px, 0px) rotate(9deg);
+                opacity: 0.7
+            }
+            50% {
+                transform: translate(1px, 17px) rotate(-4deg);
+                opacity: 0.7
+            }
+            60% {
+                transform: translate(9px, -4px) rotate(-10deg);
+                opacity: 0.2
+            }
+            70% {
+                transform: translate(13px, 7px) rotate(7deg);
+                opacity: 0.4
+            }
+            80% {
+                transform: translate(10px, 12px) rotate(9deg);
+                opacity: 0.3
+            }
+            90% {
+                transform: translate(0px, 3px) rotate(5deg);
+                opacity: 0.6
+            }
+        }
+        /* shake-crazy：是这个动画的名称
+transform：定义2d、3d动画的转换
+translate：css3动画中移动动画属性
+rotate：css3动画中旋转动画属性
+opacity：定义元素的透明度
+PS：百分数表示当前动画的进度。当鼠标移入div元素时，div就会执行shake-crazy的动画，animation是将div和shake-crazy绑定，执行shake-crazy，时间是1s，动画速度曲线是infinite。
+
+赞 2
+ */
+
+@keyframes aaa{
+    0% { 
+                /* 移动旋转 */
+                transform:  rotateY(0deg); ;
+                opacity: 0.4
+            }
+            10% {
+                transform: rotateY(36deg); ;
+                opacity: 0.8
+            }
+            20% {
+                transform: rotateY(72deg); ;
+                opacity: 0.5
+            }
+            30% {
+                transform: rotateY(108deg); ;
+                opacity: 0.6
+            }
+            40% {
+                transform: rotateY(142deg); ;
+                opacity: 0.7
+            }
+            50% {
+                transform: rotateY(178deg); ;
+                opacity: 0.7
+            }
+            60% {
+                transform: rotateY(214deg); ;
+                opacity: 0.2
+            }
+            70% {
+                transform: rotateY(250deg); ;
+                opacity: 0.4
+            }
+            80% {
+                transform: rotateY(286deg); ;
+                opacity: 0.1
+            }
+            90% {
+                transform: rotateY(332deg); ;
+                opacity: 0.6
+            }
+            100%{
+                transform: rotateY(360deg); ;
+                opacity: 0.6
+            }
+}
+
+@keyframes aaa1{
+    0% { 
+                /* 移动旋转 */
+                transform: skew(-45deg,-45deg) ;
+                opacity: 0.4
+            }
+            10% {
+                transform: skew(-20deg,-20deg) ;
+                opacity: 0.8
+            }
+            20% {
+                transform: skew(-45deg,-45deg) ;
+                opacity: 0.5
+            }
+            30% {
+                transform: skew(-20deg,-20deg) ;
+                opacity: 0.6
+            }
+            40% {
+                transform: skew(-45deg,-45deg) ;
+                opacity: 0.7
+            }
+            50% {
+                transform: skew(-20deg,-20deg) ;
+                opacity: 0.7
+            }
+            60% {
+                transform: skew(-45deg,-45deg) ;
+                opacity: 0.2
+            }
+            70% {
+                transform: skew(-20deg,-20deg) ;
+                opacity: 0.4
+            }
+            80% {
+                transform: skew(-45deg,-45deg) ;
+                opacity: 0.1
+            }
+            90% {
+                transform: skew(-20deg,-20deg) ;
+                opacity: 0.6
+            }
+            100%{
+                transform: skew(-45deg,-45deg) ;
+                opacity: 0.6
+            }
+}
+ 
+ 
+    </style>
+</head>
+<body>
+    <!-- <div class="shake">我是会动的</div> -->
+
+
+    <div class="dd"></div>
+    <div class="dd1"></div>
+</body>
+</html>

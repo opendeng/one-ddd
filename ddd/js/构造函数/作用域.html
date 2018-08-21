@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // var a=10;
+        var x=1;
+        // if(a>1){
+        //     var name ='sddas'
+        //     console.log(name);
+        // }
+        function fn(){
+            console.log(x);
+        }
+        function show(f){
+            var x=20;
+           // f()//为甚么不知样子做，二十需要自执行函数，因为这样的话话，取值只会取到最后一个
+            (function(){
+                f();//是1，不是20/fn的作用域是在全局之下创建的
+            })();//()()俗称“匿名包裹器”或“命名空间”。，用匿名函数作为一个“容器”，“容器”内部可以访问外部的变量，而外部环境不能访问“容器”内部的变量，所以( function(){…} )()内部定义的变量不会和外部的变量发生冲突.只有函数表达式才能在后面加上括号立即执行
+        }
+        show(fn);
+        //要到创建这个函数的那个作用域中取值——是“创建”，而不是“调用”，
+        //不是调用
+        //作用域往上走
+    </script>
+</body>
+</html>

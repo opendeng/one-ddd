@@ -1,0 +1,476 @@
+body {
+    overflow-x: hidden;
+    font: 12px/1.6 "微软雅黑";
+    color: #333;
+    height: 8000px;
+}
+
+body,
+dl,
+dt,
+dd,
+ol,
+ul,
+p,
+form,
+input,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.public {
+    width: 1190px;
+    margin: 0 auto;
+}
+// 中部代码
+#content{
+    background-color: #f5f5f5;
+    .banner{
+        width: 100%;
+        height: 440px;
+        border-top: 2px solid #ff0077;
+        background-color: #fe94aa;
+        .left-box{
+            position: relative;
+            float: left;
+            width: 256px;
+            height: 434px;
+            padding: 3px 0;
+            background-color:hsla(0,50%,100%,0.8);
+           .one-menu{
+            &:hover{
+                & .li {
+                    background-color: #fff;
+                    border-left-color:#ff0077; 
+                }
+            }
+               .li{
+                   &:hover{
+                       & .content-menu{
+                           display: block;
+                       }
+                   }
+                   height: 31px;
+                   border-left: 2px solid transparent;
+                   line-height: 31px;
+                   padding-left:18px ;
+                   h3{
+                       float: left;
+                       font-size:14px;
+                       a{
+                           color: #333;
+                       }
+
+                   }
+                   p{
+                       &:hover{
+                           & a{
+                               text-decoration: underline;
+                           }
+                       }
+                       float: left;
+                       a{
+                           margin-left: 15px;
+                       }
+                   }
+                   .mark{
+                       color:#ff0077;
+                   }
+                   .special{
+                       i{
+                           display: inline-block;
+                           margin-left: 2px;
+                           width: 12px;
+                           height: 13px;
+                           background: url("../images/header/hot.png") no-repeat 0/cover    ;
+                       }
+                   }
+            
+               }
+           }
+//one-menu结束
+
+.content-menu{
+               display: none;
+               position: absolute;
+               left: 256px;
+               top:0;
+               z-index: 2;
+               width: 777px;
+               height: 440px;
+               background-color: #fff;
+               .menu-one{
+                   float: left;
+                   padding-left: 20px;
+                   padding-right: 25px;
+                   width: 475px;
+                   dl{
+                       margin-top: 25px;
+                       dt{
+                           h3{
+                            &:hover{
+                                & a{
+                                    color: #FF7E20;
+                                }
+                            }
+                               float: left;
+                           }
+                           div{
+                               float: right;
+                           }
+                           i{
+                               display: inline-block;
+                               width: 10px;
+                               height: 12px;
+                               background:url("../images/icon/right.png") no-repeat 0/cover;
+                           }
+                       }
+                       dd{
+                           &:hover{
+                               & a{
+                                   color: #F78157;
+                               }
+                           }
+                           width: 410px;
+                           a{
+                            margin-right: 16px;
+                           }
+                       }
+                   }
+               }
+               .menu-tow{
+                   float: left;
+                   width: 255px;
+                   border-left: 1px solid #ddd;
+                   h2{
+                    height: 40px;
+                    line-height: 50PX;    
+                    font-size: 16PX;
+                    text-align: center;
+                     }
+                    .you-like{
+                        padding:4px 10px;
+                        li{
+                            &:hover{
+                                & img{
+                                    opacity:0.9;
+                                }
+                            }
+                            line-height:23px;
+                            float: left;
+                            width: 100px;
+                            img{
+                                vertical-align: middle；
+                            }
+                            a{
+                                &:hover{
+                                    & p{
+                                        color: #F78157;
+                                    }
+                                }
+                                text-decoration: none;
+                            }
+                            p{
+                                width: 100px;
+                                white-space: nowrap;
+                                overflow:hidden;
+                                text-overflow: ellipsis;
+                            }
+                        }
+                        &:nth-child(2n){
+                            & li{
+                                margin-left: 12px;
+                            }
+                        }
+                    }
+               }
+           }
+        }
+        .centent-box{
+            position: relative;
+            float: left;
+            width: 768px;
+            height: 440px;
+            li{
+               position: absolute;
+                img{
+                    vertical-align: middle;
+                }
+                // &:hover{
+                //     & img{
+                //         background: url("../images/header/banner2.png") no-repeat/cover;
+                //     }
+                // }               
+            }
+            .point{
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translate(-50%,0);
+                span{
+                    float: left;
+                    width: 10px;
+                    height: 10px;
+                    margin:0 5px;
+                    background-color: #FED362;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .right-box{
+            width: 166px;
+            float: left;
+            padding-top: 10px;
+            .member{
+                height: 195px;
+                background-color: #fff;
+                padding-top: 10px;
+                text-align: center;
+                .people{
+                    display: block;
+                    margin: auto;
+                    width: 72px;
+                    height: 72px;
+                    background-color:pink;
+                    border-radius: 50%;
+                    img{
+                        margin:0 6px;
+                    }
+                 }
+                 p{
+                     margin: 10px 0;
+                     span{
+                        font-weight: bold;
+                     }
+                     &:hover{
+                        & span{
+                            color: red;
+                        }
+                    }
+                 }
+                 &:hover{
+                     & p{
+                         color: #FED362;
+                     }
+                 }
+                 .member-core{
+                     margin: auto;
+                     display: block;
+                     width: 72px;
+                     height: 24px;
+                     border:1px solid  #fe94aa;
+                     line-height: 24px;
+                     color: #fe94aa;
+                 }
+                 &:hover{
+                    & .member-core{
+                        color: red;
+                    }
+                }
+            }
+            .friend{
+                height: 195px;
+                background-color: #fff;
+                margin-top: 10px;
+                padding-top: 10px;
+                text-align: center; 
+                .invite{
+                    margin-bottom: 5px;
+                    a{
+                        font-size: 16px;
+                        color: #333;
+                    }
+                    &:hover{
+                        & a{
+                            color: rgb(255, 0, 119);
+                        }
+                    }
+                } 
+                .enjoy{
+                    &:hover{
+                        & a{
+                            color: red;
+                        }
+                    }
+                    a{
+                        font-size: 14px;
+                    }
+                }
+                img{
+                    width: 130px;
+                    height: 130px;
+                }
+            }
+        }
+    }
+    //banner部分完结
+
+    .today-box{
+        margin-top:15px ;
+        .today-rob{
+            .legt-time{
+                float: left;
+                width: 230px;
+                height: 294px;
+                &:hover{
+                    & img{
+                        opacity: 0.9;
+                    }
+
+                }
+                img{
+                    width: 230px;
+                    height: 294px;
+                }
+             }
+            .right-box{
+                float: left;
+                width: 960px;
+                height: 294px;
+               // overflow: hidden;
+                .right-content{
+                    position: relative;
+                   // width: 300%;                    
+                ul{
+                    float: left;
+                    padding: 0 20px;
+                    background-color: #fff;
+                    li{
+                        float: left;
+                        width: 190px;
+                        height: 264px;
+                        padding: 30px 20px 0;
+                        .div-img{
+                            &:hover{
+                                & img{
+                                    opacity: 0.9;
+                                }
+
+                            }
+                            width: 190px;
+                            height: 190px;
+                            overflow: hidden;
+                        }
+                        .cowboy{
+                            width: 160px;
+                            padding-left: 10px;
+                            font-size: 16px;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            line-height: 34px;
+                            text-overflow: ellipsis;
+                        }
+                        &:hover{
+                            & .cowboy{
+                                color: #FF7E20;
+                            }
+                        }
+                        .price{
+                            span{
+                            float: left;
+                            font-size: 23px;
+                            color: #fe217d;
+                            }
+                            &:hover{
+                                & span{
+                                    color:blue;
+                                }
+                            }
+                            i{
+                                float: right;
+                                font-size: 12px;
+                                font-style: normal;
+                                text-decoration: line-through;
+                                margin-top: 10px;
+                                color: #666;
+                            }
+                            &:hover{
+                                & i{
+                                    color: skyblue;
+                                }
+                            }
+                        }
+                    }
+                 }
+                 .button left{
+                    left:0;
+                    position: absolute;
+                    width: 25px;
+                    height: 54px;
+                    top:50%;
+                    transform: translate(0,-50%);
+                    opacity: 0.9;
+                    cursor: pointer;
+                    background: url("../images/icon/spirit2.png") no-repeat 0px 0px cover;
+                }
+                .button right{
+                    right:0;
+                    position: absolute;
+                    width: 25px;
+                    height: 54px;
+                    top:50%;
+                    transform: translate(0,-50%);
+                    opacity: 0.9;
+                    cursor: pointer;
+                    background: url("../images/header/spirit2.png") no-repeat 0px 0px cover;
+                }
+                }
+            }
+            .btn-img{
+                float: left;
+                width:  1190px;
+                
+               background-color: rgb(16, 230, 112);
+                border: 1px solid red;
+               
+            ul{
+                width:  1190px;
+                background-color: rgb(243, 106, 42);
+                
+                
+                    li{  
+                    margin-top: 10px;
+                    float: left;
+                    }
+                    li+li{//紧接在li标签后的li标签
+                    margin-left: 10px;
+                    background-color: #FED362;
+                    img{
+                        height: 150px;
+                        vertical-align: middle;
+                    }
+                    }
+            }
+                
+            }
+
+            }
+        }
+    // .btn-img{
+    //     margin-top: 10px;
+    //     border: 1px solid red;
+        
+    // }
+//content结束框
+}

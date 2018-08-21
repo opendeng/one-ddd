@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+     //   function dd(){
+        //     alert(
+        //         123
+        //     );
+        // }
+//         function* Aa(){
+//             alert(123);
+//             yield 100;
+//         }
+//        var a= Aa();
+//         //var b= dd();
+//        // console.log(typeof a);
+//         console.log(typeof a);
+//         console.log(Array.prototype.slice)  // [Function: slice]
+// console.log(Array.prototype[Symbol.iterator])  // [Function: values]
+    var symbol=Symbol("a");//
+    var symbol=Symbol("b");
+    var symbol=Symbol("c");//最后一个
+    var ddd=[1,2,3,4,5,6,7,8,9];
+    ddd[symbol]=200;
+    ddd[symbol]=100;
+
+    ddd[symbol]=30;
+    alert(ddd[symbol])
+   alert( symbol.toString());
+   alert(String(symbol))
+    </script>
+</body>
+</html>
